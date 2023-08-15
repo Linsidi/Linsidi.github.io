@@ -6,15 +6,57 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/8 | Adige | 博客</title>
+  <title>Adige | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="explain | 索引优化的这把绝世好剑，你真的会用吗？前言对于互联网公司来说，随着用户量和数据量的不断增加，慢查询是无法避免的问题。一般情况下如果出现慢查询，意味着接口响应慢、接口超时等问题。如果是高并发的场景，可能会出现数据库连接被占满的情况，直接导致服务不可用。 慢查询的确会导致很多问题，我们要如何优化慢查询呢？ 主要解决办法有：  监控sql执行情况，发邮件、短信报警，便于快速识别慢查询">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Adige | 博客">
-<meta property="og:url" content="http://example.com/archives/2023/08/index.html">
+<meta property="og:url" content="http://example.com/2023/07/06/explain%20%20%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%E7%9A%84%E8%BF%99%E6%8A%8A%E7%BB%9D%E4%B8%96%E5%A5%BD%E5%89%91%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8%E5%90%97%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Adige | 博客">
+<meta property="og:description" content="explain | 索引优化的这把绝世好剑，你真的会用吗？前言对于互联网公司来说，随着用户量和数据量的不断增加，慢查询是无法避免的问题。一般情况下如果出现慢查询，意味着接口响应慢、接口超时等问题。如果是高并发的场景，可能会出现数据库连接被占满的情况，直接导致服务不可用。 慢查询的确会导致很多问题，我们要如何优化慢查询呢？ 主要解决办法有：  监控sql执行情况，发邮件、短信报警，便于快速识别慢查询">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kpoicCelQNQZ2XD0xHavicjic8aKfSEib90ah7J43sW11HicuvuibD6M5oYyQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kO3VHAJaQXmU5kK3IxYUzTKpS53tfElDIrMbzzDY8W8Qt5a6DFnxIBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kqJNiarvwlZ02IDE0h7p4kXc387QNBAwpm0A06gnIcqwUEQ2BoiaKXlWw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLervBHPDBZVjCIiaKic9p6easoiakia5mkkPplVib3JxJFSjiaJkHuf3iaJjQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kPdVpcPlhichucKLib6qyA76kT4nJ6nCO3pJ4MF07N7CI6vlgfqUKU89Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kE7icz2DYpbhWF45AS2jvwFSWCP236icRT1zY6sfHqbmpS8sSyvs83RGw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kcZ4hxd9ABD7h8qM8ahRiapIxFaB9Cf99U5Btp7Kg443VedI0GbhYYTg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kStLQBMmn9UvcJaSsr4Bo1EwFGiciaicI4W9KjbMnEbZBdY0sUUNL0Fpwg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2ksJaZMTicUvI080lXhS7B6vFtXalUac61jmKibJHib1iadAB17WEbic6nS3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2khAQz5ImCj8UepNSwGOoibUV5tTrCP7ia8GjxvUThiaiaNy9mqciapwMjicicg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kHzicZyBlf52QApUmniccibksyTmr3icI70AJDcOpKicrOYphUiae1OG6YkHg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kvnRImFPQQ1sfylafBkz0WOJ6Nr3Urspy33WibqpzldRGjnxsYj4eXtw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kmqUEm4qwUe0Tkm8wM5um2ibs0Kho7P4wwJpo29y3nd3BZG7ruUia2YqA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k2YznqwXKJqPQbRtD73kGb4qMUnlCRfChlibplJp4nHdb1ibZWwmbaRhw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kd4fkG8goyGf3N4ej7WqxdaVAqqT4UrQGt2UIfu76BDic8WtOjU9VgDg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJulD2LQKicox3L3Db9jdSCTuhzuamUAjxmcNibVu85G53icaH2z31WlGw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k7Svvs3JVvF7w3QxcmNRmJiarFibXwbmoI9dtU45U3II963jOscib5Bgwg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kefd80qqoRJsWUS1ibl3PR4Ptic0FzaAqKQXcDTHt8nVovCqNrwNJfzCA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJe3ochfmFgTjsp2KZgbCSw2jKBU7LI2hMI53H65n6SC9qYdJsBaKUQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kW86NpiagvibUlUKMX3n5iawwIknNDfDib8EDfGeXIeLFhK03jsMemXR2dg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kPMmV6cSjnLzibwUQjwDFXcIhBOQ6Via3QiaKSAicVUuLpuqlWl4gaT250w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k6Q0iceKkzcGg7uIOhXnReWWYickj2wU6VAmSt2b55HwIZLosicibQIUOibg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kaJRZ2nmcjKtjW7DpOic0ZqUoiaztKj6ibMQXic3buDMVVdsC426QO5Ua9w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2ksATCVUmgjMIhfn5PrXv9Piaw1Wq6fu6pKkSIH9FgjgvLGOkiajdc4PNw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJt4v2gUAsJptgj5awVfZ7sHutGa0TAmuS8x2Qu35TBgSVyeC54WbTg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k5LXQ446IFVibcmRDX7tqsPYHGz6licAfMVeRfwTTyGwzuhceUdrNuVVA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kMx9Lf6icoxXGZgArGTNcCa7crHNibCicXTe32Y2yUIuUk1ayARAuqe3kA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2krhicVQcZwCbAFqvqyDJTiaCVCc3iah7K4yRjZKspnyXRrpHMMibIDicicWBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLKIOibTXSTZCsUc7icmVqJrEVgKPeGhtmiaJibI5lm0tokO85wH8TmJK5w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDHwNnQGoicHwEU2oHlmYdy6WfSJFOd96znUpLqsZ1cG2rucwcUKbUek3c4Cl4WwYH0uXZgaMnfUAibw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k6dk1uYlt5mx1HgZzhsicYq1xFNAnib2q3nIP8q3RoCt0dsj5eZr0ibO7A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kxISHicEfkJlzPwrZq9kG2Lo0rfpYgegmZ55W8KILsy5wxDQuXrZMXEA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2khZ2yibSIQqkMWVK5icKrziaZa1IMSlc98UicJfzBAVuY1Kq97JA9nYhakQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kv2XibVDv5fp0KYu2C7341cnBibTneZznktElC4Yvr2DjuN32RqPG2nBg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kZIib3XgpGIuibeRZLHLABdwibPJLmcNolgibq4gORic5VpK0OYNQURBK6wA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kxR3W8rO5QH7l6m0ECePAeIlZ4r3VP9wPUz5TQDGTFAOZkwGbSZtWjA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLFAtAYJu3vgT4WzZfHXQt04L30zykTONZF4aJRrP7D34fzMmrGd6MQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2023-07-06T03:41:04.721Z">
+<meta property="article:modified_time" content="2023-07-06T03:42:43.297Z">
 <meta property="article:author" content="Adige">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kpoicCelQNQZ2XD0xHavicjic8aKfSEib90ah7J43sW11HicuvuibD6M5oYyQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
   
     <link rel="alternative" href="/atom.xml" title="Adige | 博客" type="application/atom+xml">
   
@@ -146,118 +188,516 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-explain  索引优化的这把绝世好剑，你真的会用吗？" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="explain-索引优化的这把绝世好剑，你真的会用吗？"><a href="#explain-索引优化的这把绝世好剑，你真的会用吗？" class="headerlink" title="explain | 索引优化的这把绝世好剑，你真的会用吗？"></a>explain | 索引优化的这把绝世好剑，你真的会用吗？</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h2><p>对于互联网公司来说，随着用户量和数据量的不断增加，慢查询是无法避免的问题。一般情况下如果出现慢查询，意味着接口响应慢、接口超时等问题。如果是高并发的场景，可能会出现数据库连接被占满的情况，直接导致服务不可用。</p>
+<p>慢查询的确会导致很多问题，我们要如何优化慢查询呢？</p>
+<p>主要解决办法有：</p>
+<ul>
+<li>监控sql执行情况，发邮件、短信报警，便于快速识别慢查询sql</li>
+<li>打开数据库慢查询日志功能</li>
+<li>简化业务逻辑</li>
+<li>代码重构、优化</li>
+<li>异步处理</li>
+<li>sql优化</li>
+<li>索引优化</li>
+</ul>
+<p>其他的办法先不说，后面有机会再单独介绍。今天我重点说说索引优化，因为它是解决慢查询sql问题最有效的手段。</p>
+<p>如何查看某条sql的索引执行情况呢？</p>
+<p>没错，在sql前面加上<code>explain</code>关键字，就能够看到它的执行计划，通过执行计划，我们可以清楚的看到表和索引执行的情况，索引有没有执行、索引执行顺序和索引的类型等。</p>
+<p>索引优化的步骤是：</p>
+<ol>
+<li>使用<code>explain</code>查看sql执行计划</li>
+<li>判断哪些索引使用不当</li>
+<li>优化sql，sql可能需要多次优化才能达到索引使用的最优值</li>
+</ol>
+<p>既然索引优化的第一步是使用<code>explain</code>，我们先全面的了解一下它。</p>
+<h2 id="explain介绍"><a href="#explain介绍" class="headerlink" title="explain介绍"></a><strong>explain介绍</strong></h2><p>先看看mysql的官方文档是怎么描述explain的：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kpoicCelQNQZ2XD0xHavicjic8aKfSEib90ah7J43sW11HicuvuibD6M5oYyQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<ul>
+<li><p>EXPLAIN可以使用于 SELECT， DELETE， INSERT， REPLACE，和 UPDATE语句。</p>
+</li>
+<li><p>当EXPLAIN与可解释的语句一起使用时，MySQL将显示来自优化器的有关语句执行计划的信息。也就是说，MySQL解释了它将如何处理该语句，包括有关如何连接表以及以何种顺序连接表的信息。</p>
+</li>
+<li><p>当EXPLAIN与非可解释的语句一起使用时，它将显示在命名连接中执行的语句的执行计划。</p>
+</li>
+<li><p>对于SELECT语句， EXPLAIN可以显示的其他执行计划的警告信息。</p>
+</li>
+</ul>
+<h2 id="explain详解"><a href="#explain详解" class="headerlink" title="explain详解"></a><strong>explain详解</strong></h2><p>explain的语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;EXPLAIN | DESCRIBE | DESC&#125;</span><br><span class="line">    tbl_name [col_name | wild]</span><br><span class="line"></span><br><span class="line">&#123;EXPLAIN | DESCRIBE | DESC&#125;</span><br><span class="line">    [explain_type]</span><br><span class="line">    &#123;explainable_stmt | FORCONNECTION connection_id&#125;</span><br><span class="line"></span><br><span class="line">explain_type: &#123;</span><br><span class="line">    EXTENDED</span><br><span class="line">  | PARTITIONS</span><br><span class="line">  | FORMAT = format_name</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">format_name: &#123;</span><br><span class="line">    TRADITIONAL</span><br><span class="line">  | JSON</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">explainable_stmt: &#123;</span><br><span class="line">    SELECTstatement</span><br><span class="line">  | DELETEstatement</span><br><span class="line">  | INSERTstatement</span><br><span class="line">  | REPLACEstatement</span><br><span class="line">  | UPDATEstatement</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用一条简单的sql看看使用<code>explain</code>关键字的效果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test1;</span><br></pre></td></tr></table></figure>
+
+<p>执行结果：<img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kO3VHAJaQXmU5kK3IxYUzTKpS53tfElDIrMbzzDY8W8Qt5a6DFnxIBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">从上图中看到执行结果中会显示12列信息，每列具体信息如下：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kqJNiarvwlZ02IDE0h7p4kXc387QNBAwpm0A06gnIcqwUEQ2BoiaKXlWw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>说白了，我们要搞懂这些列的具体含义才能正常判断索引的使用情况。</p>
+<p>话不多说，直接开始介绍吧。</p>
+<h3 id="id列"><a href="#id列" class="headerlink" title="id列"></a>id列</h3><p>该列的值是select查询中的序号，比如：1、2、3、4等，它决定了表的执行顺序。</p>
+<p>某条sql的执行计划中一般会出现三种情况：</p>
+<ol>
+<li>id相同</li>
+<li>id不同</li>
+<li>id相同和不同都有</li>
+</ol>
+<p>那么这三种情况表的执行顺序是怎么样的呢？</p>
+<h6 id="1-id相同"><a href="#1-id相同" class="headerlink" title="1.id相同"></a>1.id相同</h6><p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test1 t1 inner join test1 t2 on t1.id=t2.id</span><br></pre></td></tr></table></figure>
+
+<p>结果：<img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLervBHPDBZVjCIiaKic9p6easoiakia5mkkPplVib3JxJFSjiaJkHuf3iaJjQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">我们看到执行结果中的两条数据id都是1，是相同的。</p>
+<p>这种情况表的执行顺序是怎么样的呢？</p>
+<p>答案：从上到下执行，先执行表t1，再执行表t2。</p>
+<p>执行的表要怎么看呢？</p>
+<p>答案：看table字段，这个字段后面会详细解释。</p>
+<h6 id="2-id不同"><a href="#2-id不同" class="headerlink" title="2.id不同"></a>2.id不同</h6><p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test1 t1 where t1.id = (select id from  test1 t2 where  t2.id=2);</span><br></pre></td></tr></table></figure>
+
+<p>结果：<img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kPdVpcPlhichucKLib6qyA76kT4nJ6nCO3pJ4MF07N7CI6vlgfqUKU89Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">我们看到执行结果中两条数据的id不同，第一条数据是1，第二条数据是2。</p>
+<p>这种情况表的执行顺序是怎么样的呢？</p>
+<p>答案：序号大的先执行，这里会从下到上执行，先执行表t2，再执行表t1。</p>
+<h6 id="3-id相同和不同都有"><a href="#3-id相同和不同都有" class="headerlink" title="3.id相同和不同都有"></a>3.id相同和不同都有</h6><p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">explain</span><br><span class="line">select t1.* from test1 t1</span><br><span class="line">inner join (select max(id) mid from test1 group by id) t2</span><br><span class="line">on t1.id=t2.mid</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kE7icz2DYpbhWF45AS2jvwFSWCP236icRT1zY6sfHqbmpS8sSyvs83RGw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>我们看到执行结果中三条数据，前面两条数据的的id相同，第三条数据的id跟前面的不同。</p>
+<p>这种情况表的执行顺序又是怎么样的呢？</p>
+<p>答案：先执行序号大的，先从下而上执行。遇到序号相同时，再从上而下执行。所以这个列子中表的顺序顺序是：test1、t1、</p>
+<p><strong>也许你会在这里心生疑问：<code>&lt;``derived2&gt;</code> 是什么鬼？</strong></p>
+<p>它表示派生表，别急后面会讲的。</p>
+<p><strong>还有一个问题：id列的值允许为空吗？</strong></p>
+<p>答案在后面揭晓。</p>
+<h3 id="select-type列"><a href="#select-type列" class="headerlink" title="select_type列"></a>select_type列</h3><p>该列表示select的类型。具体包含了如下11种类型：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kcZ4hxd9ABD7h8qM8ahRiapIxFaB9Cf99U5Btp7Kg443VedI0GbhYYTg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>但是常用的其实就是下面几个：</p>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">SIMPLE</td>
+<td align="center">简单SELECT查询，不包含子查询和UNION</td>
+</tr>
+<tr>
+<td align="left">PRIMARY</td>
+<td align="center">复杂查询中的最外层查询，表示主要的查询</td>
+</tr>
+<tr>
+<td align="left">SUBQUERY</td>
+<td align="center">SELECT或WHERE列表中包含了子查询</td>
+</tr>
+<tr>
+<td align="left">DERIVED</td>
+<td align="center">FROM列表中包含的子查询，即衍生</td>
+</tr>
+<tr>
+<td align="left">UNION</td>
+<td align="center">UNION关键字之后的查询</td>
+</tr>
+<tr>
+<td align="left">UNION RESULT</td>
+<td align="center">从UNION后的表获取结果集</td>
+</tr>
+</tbody></table>
+<p>下面看看这些SELECT类型具体是怎么出现的：</p>
+<ol>
+<li><p>SIMPLE</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test1;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kStLQBMmn9UvcJaSsr4Bo1EwFGiciaicI4W9KjbMnEbZBdY0sUUNL0Fpwg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>它只在简单SELECT查询中出现，不包含子查询和UNION，这种类型比较直观就不多说了。</p>
+</li>
+<li><p>PRIMARY 和 SUBQUERY</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test1 t1 where t1.id = (select id from  test1 t2 where  t2.id=2);</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2ksJaZMTicUvI080lXhS7B6vFtXalUac61jmKibJHib1iadAB17WEbic6nS3A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>我们看到这条嵌套查询的sql中，最外层的t1表是PRIMARY类型，而最里面的子查询t2表是SUBQUERY类型。</p>
+</li>
+<li><p>DERIVED</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">explain</span><br><span class="line">select t1.* from test1 t1</span><br><span class="line">inner join (select max(id) mid from test1 group by id) t2</span><br><span class="line">on t1.id=t2.mid</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2khAQz5ImCj8UepNSwGOoibUV5tTrCP7ia8GjxvUThiaiaNy9mqciapwMjicicg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>最后一条记录就是衍生表，它一般是FROM列表中包含的子查询，这里是sql中的分组子查询。</p>
+</li>
+<li><p>UNION 和 UNION RESULT</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">explain</span><br><span class="line">select * from test1</span><br><span class="line">union</span><br><span class="line">select* from test2</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kHzicZyBlf52QApUmniccibksyTmr3icI70AJDcOpKicrOYphUiae1OG6YkHg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>test2表是UNION关键字之后的查询，所以被标记为UNION，test1是最主要的表，被标记为PRIMARY。而&lt;union1,2&gt;表示id&#x3D;1和id&#x3D;2的表union，其结果被标记为UNION RESULT。</p>
+</li>
+</ol>
+<p>UNION 和 UNION RESULT一般会成对出现。</p>
+<p><strong>此外，回答上面的问题：****id列的值允许为空吗？</strong></p>
+<p>如果仔细看上面那张图，会发现id列是可以允许为空的，并且是在SELECT类型为： UNION RESULT的时候。</p>
+<h3 id="table列"><a href="#table列" class="headerlink" title="table列"></a>table列</h3><p>该列的值表示输出行所引用的表的名称，比如前面的：test1、test2等。</p>
+<p>但也可以是以下值之一：</p>
+<ul>
+<li>&#96;&#96;：具有和id值的行的M并集N。</li>
+<li>&#96;&#96;：用于与该行的派生表结果id的值N。派生表可能来自（例如）FROM子句中的子查询 。</li>
+<li>&#96;&#96;：子查询的结果，其id值为N</li>
+</ul>
+<h3 id="partitions列"><a href="#partitions列" class="headerlink" title="partitions列"></a>partitions列</h3><p>该列的值表示查询将从中匹配记录的分区</p>
+<h3 id="type列"><a href="#type列" class="headerlink" title="type列"></a>type列</h3><p>该列的值表示连接类型，是查看索引执行情况的一个重要指标。包含如下类型：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kvnRImFPQQ1sfylafBkz0WOJ6Nr3Urspy33WibqpzldRGjnxsYj4eXtw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>执行结果从最好到最坏的的顺序是从上到下。</p>
+<p>我们需要重点掌握的是下面几种类型：</p>
+<p>system &gt; const &gt; eq_ref &gt; ref &gt; range &gt; index &gt; ALL</p>
+<p>在演示之前，先说明一下test2表中只有一条数据：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kmqUEm4qwUe0Tkm8wM5um2ibs0Kho7P4wwJpo29y3nd3BZG7ruUia2YqA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>并且code字段上面建了一个普通索引：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k2YznqwXKJqPQbRtD73kGb4qMUnlCRfChlibplJp4nHdb1ibZWwmbaRhw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>下面逐一看看常见的几个连接类型是怎么出现的：</p>
+<ol>
+<li><p>system</p>
+<p>这种类型要求数据库表中只有一条数据，是const类型的一个特例，一般情况下是不会出现的。</p>
+</li>
+<li><p>const</p>
+<p>通过一次索引就能找到数据，一般用于主键或唯一索引作为条件的查询sql中，执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test2 where id=1;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kd4fkG8goyGf3N4ej7WqxdaVAqqT4UrQGt2UIfu76BDic8WtOjU9VgDg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p>eq_ref</p>
+<p>常用于主键或唯一索引扫描。执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test2 t1 inner join test2 t2 on t1.id=t2.id;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJulD2LQKicox3L3Db9jdSCTuhzuamUAjxmcNibVu85G53icaH2z31WlGw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>此时，有人可能感到不解，const和eq_ref都是对主键或唯一索引的扫描，有什么区别？</p>
+<p> 答：const只索引一次，而eq_ref主键和主键匹配，由于表中有多条数据，一般情况下要索引多次，才能全部匹配上。</p>
+</li>
+<li><p>ref</p>
+<p>常用于非主键和唯一索引扫描。执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test2 where code = &#x27;001&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k7Svvs3JVvF7w3QxcmNRmJiarFibXwbmoI9dtU45U3II963jOscib5Bgwg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p>range</p>
+<p>常用于范围查询，比如：between … and 或 In 等操作，执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select * from test2 where id between 1 and 2;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kefd80qqoRJsWUS1ibl3PR4Ptic0FzaAqKQXcDTHt8nVovCqNrwNJfzCA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p>index</p>
+<p>全索引扫描。执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code from test2;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJe3ochfmFgTjsp2KZgbCSw2jKBU7LI2hMI53H65n6SC9qYdJsBaKUQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p>ALL</p>
+<p>全表扫描。执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select *  from test2;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kW86NpiagvibUlUKMX3n5iawwIknNDfDib8EDfGeXIeLFhK03jsMemXR2dg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+</ol>
+<h3 id="possible-keys列"><a href="#possible-keys列" class="headerlink" title="possible_keys列"></a>possible_keys列</h3><p>该列表示可能的索引选择。</p>
+<p>请注意，此列完全独立于表的顺序，这就意味着possible_keys在实践中，某些键可能无法与生成的表顺序一起使用。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kPMmV6cSjnLzibwUQjwDFXcIhBOQ6Via3QiaKSAicVUuLpuqlWl4gaT250w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>如果此列是NULL，则没有相关的索引。在这种情况下，您可以通过检查该WHERE 子句以检查它是否引用了某些适合索引的列，从而提高查询性能。</p>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="key列"><a href="#key列" class="headerlink" title="key列"></a>key列</h3><p>该列表示实际用到的索引。</p>
+<p>可能会出现possible_keys列为NULL，但是key不为NULL的情况。</p>
+<p>演示之前，先看看test1表结构：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k6Q0iceKkzcGg7uIOhXnReWWYickj2wU6VAmSt2b55HwIZLosicibQIUOibg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>test1表中数据：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kaJRZ2nmcjKtjW7DpOic0ZqUoiaztKj6ibMQXic3buDMVVdsC426QO5Ua9w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>使用的索引：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2ksATCVUmgjMIhfn5PrXv9Piaw1Wq6fu6pKkSIH9FgjgvLGOkiajdc4PNw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>code和name字段使用了联合索引。</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code  from test1;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kJt4v2gUAsJptgj5awVfZ7sHutGa0TAmuS8x2Qu35TBgSVyeC54WbTg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这条sql预计没有使用索引，但是实际上使用了全索引扫描方式的索引。</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3><h3 id="key-len列"><a href="#key-len列" class="headerlink" title="key_len列"></a>key_len列</h3><p>该列表示使用索引的长度。上面的key列可以看出有没有使用索引，key_len列则可以更进一步看出索引使用是否充分。不出意外的话，它是最重要的列。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k5LXQ446IFVibcmRDX7tqsPYHGz6licAfMVeRfwTTyGwzuhceUdrNuVVA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>有个关键的问题浮出水面：key_len是如何计算的？</strong></p>
+<p>决定key_len值的三个因素：</p>
+<p> 1.字符集</p>
+<p> 2.长度</p>
+<p> 3.是否为空 </p>
+<p>常用的字符编码占用字节数量如下：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kMx9Lf6icoxXGZgArGTNcCa7crHNibCicXTe32Y2yUIuUk1ayARAuqe3kA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>目前我的数据库字符编码格式用的：UTF8占3个字节。</p>
+<p>mysql常用字段占用字节数：</p>
+<table>
+<thead>
+<tr>
+<th align="left">字段类型</th>
+<th align="center">占用字节数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">char(n)</td>
+<td align="center">n</td>
+</tr>
+<tr>
+<td align="left">varchar(n)</td>
+<td align="center">n + 2</td>
+</tr>
+<tr>
+<td align="left">tinyint</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="left">smallint</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="left">int</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">bigint</td>
+<td align="center">8</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="left">timestamp</td>
+<td align="center">4</td>
+</tr>
+<tr>
+<td align="left">datetime</td>
+<td align="center">8</td>
+</tr>
+</tbody></table>
+<h3 id="-2"><a href="#-2" class="headerlink" title=""></a></h3><h3 id="此外，如果字段类型允许为空则加1个字节。"><a href="#此外，如果字段类型允许为空则加1个字节。" class="headerlink" title="此外，如果字段类型允许为空则加1个字节。"></a>此外，如果字段类型允许为空则加1个字节。</h3><h3 id="上图中的-184是怎么算的？"><a href="#上图中的-184是怎么算的？" class="headerlink" title="上图中的 184是怎么算的？"></a>上图中的 184是怎么算的？</h3><h3 id="-3"><a href="#-3" class="headerlink" title=""></a></h3><h3 id="184-30-3-2-30-3-2"><a href="#184-30-3-2-30-3-2" class="headerlink" title="184 &#x3D; 30 * 3 + 2 + 30 * 3 + 2"></a>184 &#x3D; 30 * 3 + 2 + 30 * 3 + 2</h3><p> 再把test1表的code字段类型改成char，并且改成允许为空：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2krhicVQcZwCbAFqvqyDJTiaCVCc3iah7K4yRjZKspnyXRrpHMMibIDicicWBw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code  from test1;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLKIOibTXSTZCsUc7icmVqJrEVgKPeGhtmiaJibI5lm0tokO85wH8TmJK5w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h3 id="怎么算的？"><a href="#怎么算的？" class="headerlink" title="怎么算的？"></a>怎么算的？</h3><p>183 &#x3D; 30 * 3 + 1 + 30 * 3 + 2</p>
+<p>**还有一个问题：为什么这列表示索引使用是否充分呢，还有使用不充分的情况？<br>**</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code  from test1 where code=&#x27;001&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h3><p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDHwNnQGoicHwEU2oHlmYdy6WfSJFOd96znUpLqsZ1cG2rucwcUKbUek3c4Cl4WwYH0uXZgaMnfUAibw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>上图中使用了联合索引：idx_code_name，如果索引全匹配key_len应该是183，但实际上却是92，这就说明没有使用所有的索引，索引使用不充分。</p>
+<h3 id="ref列"><a href="#ref列" class="headerlink" title="ref列"></a>ref列</h3><p>该列表示索引命中的列或者常量。</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select *  from test1 t1 inner join test1 t2 on t1.id=t2.id where t1.code=&#x27;001&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2k6dk1uYlt5mx1HgZzhsicYq1xFNAnib2q3nIP8q3RoCt0dsj5eZr0ibO7A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>我们看到表t1命中的索引是const(常量)，而t2命中的索引是列sue库的t1表的id字段。</p>
+<h3 id="rows列"><a href="#rows列" class="headerlink" title="rows列"></a>rows列</h3><p>该列表示MySQL认为执行查询必须检查的行数。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kxISHicEfkJlzPwrZq9kG2Lo0rfpYgegmZ55W8KILsy5wxDQuXrZMXEA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>对于InnoDB表，此数字是估计值，可能并不总是准确的。</p>
+<h3 id="filtered列"><a href="#filtered列" class="headerlink" title="filtered列"></a>filtered列</h3><p>该列表示按表条件过滤的表行的估计百分比。最大值为100，这表示未过滤行。值从100减小表示过滤量增加。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2khZ2yibSIQqkMWVK5icKrziaZa1IMSlc98UicJfzBAVuY1Kq97JA9nYhakQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>rows显示了检查的估计行数，rows× filtered显示了与下表连接的行数。例如，如果 rows为1000且 filtered为50.00（50％），则与下表连接的行数为1000×50％&#x3D; 500。</p>
+<h3 id="Extra列"><a href="#Extra列" class="headerlink" title="Extra列"></a>Extra列</h3><p>该字段包含有关MySQL如何解析查询的其他信息，这列还是挺重要的，但是里面包含的值太多，就不一一介绍了，只列举几个常见的。</p>
+<ol>
+<li><p><strong>Impossible WHERE</strong></p>
+<p>表示WHERE后面的条件一直都是false，</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code  from test1 where &#x27;a&#x27; = &#x27;b&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kv2XibVDv5fp0KYu2C7341cnBibTneZznktElC4Yvr2DjuN32RqPG2nBg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p><strong>Using filesort</strong></p>
+<p>表示按文件排序，一般是在指定的排序和索引排序不一致的情况才会出现。</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select code  from test1 order by name desc;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kZIib3XgpGIuibeRZLHLABdwibPJLmcNolgibq4gORic5VpK0OYNQURBK6wA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>这里建立的是code和name的联合索引，顺序是code在前，name在后，这里直接按name降序，跟之前联合索引的顺序不一样。</p>
+</li>
+<li><p><strong>Using index</strong></p>
+<p>表示是否用了覆盖索引，说白了它表示是否所有获取的列都走了索引。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kxR3W8rO5QH7l6m0ECePAeIlZ4r3VP9wPUz5TQDGTFAOZkwGbSZtWjA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>上面那个例子中其实就用到了：Using index，因为只返回一列code，它字段走了索引。</p>
+</li>
+<li><p><strong>Using temporary</strong></p>
+<p>表示是否使用了临时表，一般多见于order by 和 group by语句。</p>
+<p>执行sql如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain select name  from test1 group by name;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/uL371281oDEWFbxDB7L0jHzTqu6ust2kLFAtAYJu3vgT4WzZfHXQt04L30zykTONZF4aJRrP7D34fzMmrGd6MQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+</li>
+<li><p><strong>Using where</strong></p>
+<p>表示使用了where条件过滤。</p>
+</li>
+<li><p><strong>Using join buffer</strong></p>
+</li>
+</ol>
+<p>  表示是否使用连接缓冲。来自较早联接的表被部分读取到联接缓冲区中，然后从缓冲区中使用它们的行来与当前表执行联接。</p>
+<h2 id="索引优化的过程"><a href="#索引优化的过程" class="headerlink" title="索引优化的过程"></a>索引优化的过程</h2><p>  1.先用慢查询日志定位具体需要优化的sql</p>
+<p>  2.使用explain执行计划查看索引使用情况</p>
+<p>  3.重点关注：</p>
+<p>​    key（查看有没有使用索引）</p>
+<p>​    key_len（查看索引使用是否充分）</p>
+<p>​    type（查看索引类型）</p>
+<p>​    Extra（查看附加信息：排序、临时表、where条件为false等）</p>
+<p>  一般情况下根据这4列就能找到索引问题。</p>
+<p>  4.根据上1步找出的索引问题优化sql</p>
+<p>  5.再回到第2步</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2023-08-14T14:13:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/07/06/explain%20%20%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%E7%9A%84%E8%BF%99%E6%8A%8A%E7%BB%9D%E4%B8%96%E5%A5%BD%E5%89%91%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8%E5%90%97%EF%BC%9F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/hello-world/" class="archive-article-date">
-  	<time datetime="2023-08-14T14:03:12.952Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2023/08/14/Turnin'%20%E6%AD%8C%E8%AF%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/06/26/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B9%8B%E7%BE%8E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/08/14/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2023-08-14T13:47:30.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/Turnin'%20%E6%AD%8C%E8%AF%8D/" class="archive-article-date">
-  	<time datetime="2023-08-14T01:01:00.897Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -280,8 +720,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

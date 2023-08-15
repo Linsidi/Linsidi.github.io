@@ -6,15 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/8 | Adige | 博客</title>
+  <title>Adige | 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="布隆过滤器之美Java突击网站：http:&#x2F;&#x2F;www.susan.net.cn，强烈建议收藏。 布隆过滤器是一个精巧而且经典的数据结构。 你可能没想到：RocketMQ、 Hbase 、Cassandra 、LevelDB 、RocksDB 这些知名项目中都有布隆过滤器的身影。 对于后端程序员来讲，学习和理解布隆过滤器有很大的必要性。来吧，我们一起品味布隆过滤器的设计之美。  1 缓存穿透我们先来">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Adige | 博客">
-<meta property="og:url" content="http://example.com/archives/2023/08/index.html">
+<meta property="og:url" content="http://example.com/2023/06/26/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B9%8B%E7%BE%8E/index.html">
 <meta property="og:site_name" content="Adige | 博客">
+<meta property="og:description" content="布隆过滤器之美Java突击网站：http:&#x2F;&#x2F;www.susan.net.cn，强烈建议收藏。 布隆过滤器是一个精巧而且经典的数据结构。 你可能没想到：RocketMQ、 Hbase 、Cassandra 、LevelDB 、RocksDB 这些知名项目中都有布隆过滤器的身影。 对于后端程序员来讲，学习和理解布隆过滤器有很大的必要性。来吧，我们一起品味布隆过滤器的设计之美。  1 缓存穿透我们先来">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqRzFWGXWpmNfDVOu0IWFiaXwn17gKfibwiaTlUqKb7m0nf3dkR3gAfykbg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqp6iaX5anwnS634Jk3IfibJa8ibPOGAbgIvGxNBf7Wm5c6nkZeW7NCk0Cw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqFtdLsaIdBfPgM8DkorsDJQam5q9tXY5RquFh3x9cYQM8U0eibmPzLYg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqpicsVwianxrIUOOic0icWia5NOCU9UfbIB28SB1yPy5nsc1nRDEZGadvrag/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqMWez05vacQYjFZmjibMT7XzG5YaqNRmeokNq7NLvk5Cal2YMyiaNZGPQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibq7kFhRZJJv1K9dNDfmXLs3xTJ2qUcTToqlPycreLSgMNfTdgXjltgow/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqV9QCzGAud4VqNfAViadHBz5WdnEoSRpC23QtCySunb2wEcLrx2SEQag/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqC0YZX6PTjj7z4ZUR4QQO8ibDVtaHLueCuN0lAQ5EZqMc6IxK5CeQUTA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqkXomWJJtmhPF73NeM2MSJiabDZmaYTSfMsMuhgy7j1sJ67hB9aial87A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqU2YOR2p8yWfGkZ3pQhuDgFZ9c0qddPMlmVoyQ9cQFiaUYj1AicReA2nw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_jpg/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqtPA7VxFNf47PRUSeymibTv0U07u2WHb6UGkz2iaKc8jBWQSkuBZZDkKQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqDdn5tbtHY3QHJQeicNZYlcia3NAFIClXMomoicTJJoYq3xpEvpnhXJbqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibq4hpb82Iw31fw8uD2KA1XeEmpb64X6fucicNhP15lfd5zChfYv63DXxA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqqicKiaicezPEEjL38Bob9gHm8mmZoaibVgAcQGuY6oonNBhTOib3CKyXzQQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqz8ySyLiclW4DFeQ6lYRPe5D2QeTPQJdRr8JvVXLFUGvjXZgHibjgeicVg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqsyRqRsedZctZl7SagB9ic746pznyeUicnFic04oWDpajymGDGFlHzPdBg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2023-06-26T08:25:41.261Z">
+<meta property="article:modified_time" content="2023-06-26T08:58:04.225Z">
 <meta property="article:author" content="Adige">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqRzFWGXWpmNfDVOu0IWFiaXwn17gKfibwiaTlUqKb7m0nf3dkR3gAfykbg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
   
     <link rel="alternative" href="/atom.xml" title="Adige | 博客" type="application/atom+xml">
   
@@ -146,118 +167,281 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-布隆过滤器之美" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="布隆过滤器之美"><a href="#布隆过滤器之美" class="headerlink" title="布隆过滤器之美"></a>布隆过滤器之美</h1><p><strong>Java突击网站：<a target="_blank" rel="noopener" href="http://www.susan.net.cn,强烈建议收藏./">http://www.susan.net.cn，强烈建议收藏。</a></strong></p>
+<p>布隆过滤器是一个精巧而且经典的数据结构。</p>
+<p>你可能没想到：RocketMQ、 Hbase 、Cassandra 、LevelDB 、RocksDB 这些知名项目中都有布隆过滤器的身影。</p>
+<p>对于后端程序员来讲，学习和理解布隆过滤器有很大的必要性。来吧，我们一起品味布隆过滤器的设计之美。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqRzFWGXWpmNfDVOu0IWFiaXwn17gKfibwiaTlUqKb7m0nf3dkR3gAfykbg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h1 id="1-缓存穿透"><a href="#1-缓存穿透" class="headerlink" title="1 缓存穿透"></a>1 缓存穿透</h1><p>我们先来看一个商品服务查询详情的接口：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public Product queryProductById (Long id)&#123;</span><br><span class="line">   // 查询缓存</span><br><span class="line">   Product product = queryFromCache(id);</span><br><span class="line">   if(product != null) &#123;</span><br><span class="line">     return product ;</span><br><span class="line">   &#125;</span><br><span class="line">   // 从数据库查询</span><br><span class="line">   product = queryFromDataBase(id);</span><br><span class="line">   if(product != null) &#123;</span><br><span class="line">       saveCache(id , product);</span><br><span class="line">   &#125;</span><br><span class="line">   return product;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqp6iaX5anwnS634Jk3IfibJa8ibPOGAbgIvGxNBf7Wm5c6nkZeW7NCk0Cw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>假设此商品既不存储在缓存中，也不存在数据库中，则没有办法<strong>回写缓存</strong>，当有类似这样大量的请求访问服务时，数据库的压力就会极大。</p>
+<p>这是一个典型的缓存穿透的场景。</p>
+<p>为了解决这个问题呢，通常我们可以向分布式缓存中写入一个过期时间较短的空值占位，但这样会占用较多的存储空间，性价比不足。</p>
+<p>问题的本质是：”<strong>如何以极小的代价检索一个元素是否在一个集合中</strong>？”</p>
+<p>我们的主角<strong>布隆过滤器</strong>出场了，它就能游刃有余的<strong>平衡好时间和空间两种维度</strong>。</p>
+<h1 id="2-原理解析"><a href="#2-原理解析" class="headerlink" title="2 原理解析"></a>2 原理解析</h1><p><strong>布隆过滤器</strong>（英语：Bloom Filter）是1970年由布隆提出的。它实际上是一个很长的<strong>二进制向量</strong>和一系列<strong>随机映射函数</strong>。</p>
+<p>布隆过滤器可以用于检索一个元素是否在一个集合中。它的优点是<strong>空间效率</strong>和<strong>查询时间</strong>都<strong>远远超过一般的算法</strong>，缺点是有一定的误识别率和删除困难。</p>
+<p>布隆过滤器的原理：当一个元素被加入集合时，通过 K 个散列函数将这个元素映射成一个位数组中的 K 个点，把它们置为 1。检索时，我们只要看看这些点是不是都是 1 就（大约）知道集合中有没有它了：如果这<strong>些点有任何一个 0</strong>，则<strong>被检元素一定不在</strong>；如果<strong>都是 1</strong>，则被检元素<strong>很可能在</strong>。</p>
+<p>简单来说就是准备一个长度为 m 的位数组并初始化所有元素为 0，用 k 个散列函数对元素进行 k 次散列运算跟 len (m) 取余得到 k 个位置并将 m 中对应位置设置为 1。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqFtdLsaIdBfPgM8DkorsDJQam5q9tXY5RquFh3x9cYQM8U0eibmPzLYg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>如上图，位数组的长度是８，散列函数个数是 3，先后保持两个元素ｘ，ｙ。这两个元素都经过三次哈希函数生成三个哈希值，并映射到位数组的不同的位置，并置为1。元素 x 映射到位数组的第０位，第４位，第７位，元素ｙ映射到数组的位数组的第１位，第４位，第６位。</p>
+<p>保存元素 x 后，位数组的第4位被设置为1之后，在处理元素 y 时第4位会被覆盖，同样也会设置为 1。</p>
+<p>当布隆过滤器<strong>保存的元素越多</strong>，<strong>被置为 1 的 bit 位也会越来越多</strong>，元素 x 即便没有存储过，假设哈希函数映射到位数组的三个位都被其他值设置为 1 了，对于布隆过滤器的机制来讲，元素 x 这个值也是存在的，也就是说布隆过滤器<strong>存在一定的误判率</strong>。</p>
+<p><strong>▍ 误判率</strong></p>
+<p>布隆过滤器包含如下四个属性：</p>
+<ul>
+<li>k : 哈希函数个数</li>
+<li>m : 位数组长度</li>
+<li>n : 插入的元素个数</li>
+<li>p : 误判率</li>
+</ul>
+<p>若位数组长度太小则会导致所有 bit 位很快都会被置为 1 ，那么检索任意值都会返回”可能存在“ ， 起不到过滤的效果。位数组长度越大，则误判率越小。</p>
+<p>同时，哈希函数的个数也需要考量，哈希函数的个数越大，检索的速度会越慢，误判率也越小，反之，则误判率越高。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_jpg/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqpicsVwianxrIUOOic0icWia5NOCU9UfbIB28SB1yPy5nsc1nRDEZGadvrag/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>从张图我们可以观察到相同位数组长度的情况下，随着哈希函数的个人的增长，误判率显著的下降。</p>
+<p>误判率 p 的公式是<img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqMWez05vacQYjFZmjibMT7XzG5YaqNRmeokNq7NLvk5Cal2YMyiaNZGPQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<ol>
+<li>k 次哈希函数某一 bit 位未被置为 1 的概率为<img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibq7kFhRZJJv1K9dNDfmXLs3xTJ2qUcTToqlPycreLSgMNfTdgXjltgow/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></li>
+<li>插入 n 个元素后某一 bit 位依旧为 0 的概率为<img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqV9QCzGAud4VqNfAViadHBz5WdnEoSRpC23QtCySunb2wEcLrx2SEQag/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></li>
+<li>那么插入 n 个元素后某一 bit 位置为1的概率为<img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqC0YZX6PTjj7z4ZUR4QQO8ibDVtaHLueCuN0lAQ5EZqMc6IxK5CeQUTA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></li>
+<li>整体误判率为 <img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqkXomWJJtmhPF73NeM2MSJiabDZmaYTSfMsMuhgy7j1sJ67hB9aial87A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">，当 m 足够大时，误判率会越小，该公式约等于<img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqU2YOR2p8yWfGkZ3pQhuDgFZ9c0qddPMlmVoyQ9cQFiaUYj1AicReA2nw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></li>
+</ol>
+<p>我们会预估布隆过滤器的误判率 p 以及待插入的元素个数 n 分别推导出最合适的位数组长度 m 和 哈希函数个数 k。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_jpg/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqtPA7VxFNf47PRUSeymibTv0U07u2WHb6UGkz2iaKc8jBWQSkuBZZDkKQ/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>▍ 布隆过滤器支持删除吗</strong></p>
+<p>布隆过滤器其实并不支持删除元素，因为多个元素可能哈希到一个布隆过滤器的同一个位置，如果直接删除该位置的元素，则会影响其他元素的判断。</p>
+<p><strong>▍ 时间和空间效率</strong></p>
+<p>布隆过滤器的空间复杂度为 O(m) ，插入和查询时间复杂度都是 O(k) 。存储空间和插入、查询时间都不会随元素增加而增大。空间、时间效率都很高。</p>
+<p><strong>▍哈希函数类型</strong></p>
+<p>Murmur3，FNV 系列和 Jenkins 等非密码学哈希函数适合，因为 Murmur3 算法简单，能够平衡好速度和随机分布，很多开源产品经常选用它作为哈希函数。</p>
+<h1 id="3-Guava实现"><a href="#3-Guava实现" class="headerlink" title="3 Guava实现"></a>3 Guava实现</h1><p>Google Guava是 Google 开发和维护的开源 Java开发库，它包含许多基本的工具类，例如字符串处理、集合、并发工具、I&#x2F;O和数学函数等等。</p>
+<p><strong>1、添加Maven依赖</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;com.google.guava&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;guava&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;31.0.1-jre&lt;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、创建布隆过滤器</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">BloomFilter&lt;Integer&gt; filter = BloomFilter.create(</span><br><span class="line">  //Funnel 是一个接口，用于将任意类型的对象转换为字节流，</span><br><span class="line">  //以便用于布隆过滤器的哈希计算。</span><br><span class="line">  Funnels.integerFunnel(), </span><br><span class="line">  10000,  // 插入数据条目数量</span><br><span class="line">  0.001  // 误判率</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、添加数据</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@PostConstruct</span><br><span class="line">public void addProduct() &#123;</span><br><span class="line">    logger.info(&quot;初始化布隆过滤器数据开始&quot;);</span><br><span class="line">    //插入4个元素</span><br><span class="line">     filter.put(1L);</span><br><span class="line">     filter.put(2L);</span><br><span class="line">     filter.put(3L);</span><br><span class="line">     filter.put(4L);</span><br><span class="line">     logger.info(&quot;初始化布隆过滤器数据结束&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、判断数据是否存在</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public boolean maycontain(Long id) &#123;</span><br><span class="line">    return filter.mightContain(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来，我们查看 Guava 源码中布隆过滤器是如何实现的 ？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">static &lt;T&gt; BloomFilter&lt;T&gt; create(Funnel&lt;? super T&gt; funnel, long expectedInsertions, double fpp, BloomFilter.Strategy strategy) &#123;</span><br><span class="line">    // 省略部分前置验证代码 </span><br><span class="line">    // 位数组长度</span><br><span class="line">    long numBits = optimalNumOfBits(expectedInsertions, fpp);</span><br><span class="line">    // 哈希函数次数</span><br><span class="line">    int numHashFunctions = optimalNumOfHashFunctions(expectedInsertions, numBits);</span><br><span class="line">    try &#123;</span><br><span class="line">      return new BloomFilter&lt;T&gt;(</span><br><span class="line">                    new LockFreeBitArray(numBits), </span><br><span class="line">                    numHashFunctions, </span><br><span class="line">                    funnel,</span><br><span class="line">                    strategy</span><br><span class="line">      );</span><br><span class="line">    &#125; catch (IllegalArgumentException e) &#123;</span><br><span class="line">      throw new IllegalArgumentException(&quot;Could not create BloomFilter of &quot; + numBits + &quot; bits&quot;, e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//计算位数组长度</span><br><span class="line">//n:插入的数据条目数量</span><br><span class="line">//p:期望误判率</span><br><span class="line">@VisibleForTesting</span><br><span class="line">static long optimalNumOfBits(long n, double p) &#123;</span><br><span class="line">   if (p == 0) &#123;</span><br><span class="line">     p = Double.MIN_VALUE;</span><br><span class="line">   &#125;</span><br><span class="line">   return (long) (-n * Math.log(p) / (Math.log(2) * Math.log(2)));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 计算哈希次数</span><br><span class="line">@VisibleForTesting</span><br><span class="line">static int optimalNumOfHashFunctions(long n, long m) &#123;</span><br><span class="line">    // (m / n) * log(2), but avoid truncation due to division!</span><br><span class="line">    return Math.max(1, (int) Math.round((double) m / n * Math.log(2)));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Guava 的计算位数组长度和哈希次数和原理解析这一节展示的公式保持一致。</p>
+<p>重点来了，Bloom filter 是如何判断元素存在的 ？</p>
+<p>方法名就非常有 google 特色 ，  ”<strong>mightContain</strong>“ 的中文表意是：”可能存在“ 。<strong>方法的返回值为 true ，元素可能存在，但若返回值为 false ，元素必定不存在。</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">public &lt;T extends @Nullable Object&gt; boolean mightContain(</span><br><span class="line">    @ParametricNullness T object,</span><br><span class="line">    //Funnel 是一个接口，用于将任意类型的对象转换为字节流，</span><br><span class="line">    //以便用于布隆过滤器的哈希计算。</span><br><span class="line">    Funnel&lt;? super T&gt; funnel,  </span><br><span class="line">    //用于计算哈希值的哈希函数的数量</span><br><span class="line">    int numHashFunctions,</span><br><span class="line">    //位数组实例，用于存储布隆过滤器的位集</span><br><span class="line">    LockFreeBitArray bits) &#123;</span><br><span class="line">  long bitSize = bits.bitSize();</span><br><span class="line">  //使用 MurmurHash3 哈希函数计算对象 object 的哈希值，</span><br><span class="line">  //并将其转换为一个 byte 数组。</span><br><span class="line">  byte[] bytes = Hashing.murmur3_128().hashObject(object, funnel).getBytesInternal();</span><br><span class="line">  long hash1 = lowerEight(bytes);</span><br><span class="line">  long hash2 = upperEight(bytes);</span><br><span class="line"></span><br><span class="line">  long combinedHash = hash1;</span><br><span class="line">  for (int i = 0; i &lt; numHashFunctions; i++) &#123;</span><br><span class="line">    // Make the combined hash positive and indexable</span><br><span class="line">    // 计算哈希值的索引，并从位数组中查找索引处的位。</span><br><span class="line">    // 如果索引处的位为 0，表示对象不在布隆过滤器中，返回 false。</span><br><span class="line">    if (!bits.get((combinedHash &amp; Long.MAX_VALUE) % bitSize)) &#123;</span><br><span class="line">      return false;</span><br><span class="line">    &#125;</span><br><span class="line">    // 将 hash2 加到 combinedHash 上，用于计算下一个哈希值的索引。</span><br><span class="line">    combinedHash += hash2;</span><br><span class="line">  &#125;</span><br><span class="line">  return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-Redisson实现"><a href="#3-Redisson实现" class="headerlink" title="3 Redisson实现"></a>3 Redisson实现</h1><p>Redisson 是一个用 Java 编写的 Redis 客户端，它实现了分布式对象和服务，包括集合、映射、锁、队列等。Redisson的API简单易用，使得在分布式环境下使用Redis 更加容易和高效。</p>
+<p><strong>1、添加Maven依赖</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;org.redisson&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;redisson&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;3.16.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>2、配置 Redisson 客户端</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">@Configuration</span><br><span class="line">public class RedissonConfig &#123;</span><br><span class="line"></span><br><span class="line"> Bean</span><br><span class="line"> public RedissonClient redissonClient() &#123;</span><br><span class="line">    Config config = new Config();</span><br><span class="line">    config.useSingleServer().setAddress(&quot;redis://localhost:6379&quot;);</span><br><span class="line">    return Redisson.create(config);</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3、初始化</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">RBloomFilter&lt;Long&gt; bloomFilter = redissonClient.</span><br><span class="line">                                      getBloomFilter(&quot;myBloomFilter&quot;);</span><br><span class="line">//10000表示插入元素的个数，0.001表示误判率</span><br><span class="line">bloomFilter.tryInit(10000, 0.001);</span><br><span class="line">//插入4个元素</span><br><span class="line">bloomFilter.add(1L);</span><br><span class="line">bloomFilter.add(2L);</span><br><span class="line">bloomFilter.add(3L);</span><br><span class="line">bloomFilter.add(4L);</span><br></pre></td></tr></table></figure>
+
+<p><strong>4、判断数据是否存在</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public boolean mightcontain(Long id) &#123;</span><br><span class="line">    return bloomFilter.contains(id);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>好，我们来从源码分析 Redisson 布隆过滤器是如何实现的 ？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public boolean tryInit(long expectedInsertions, double falseProbability) &#123;</span><br><span class="line">    // 位数组大小</span><br><span class="line">    size = optimalNumOfBits(expectedInsertions, falseProbability);</span><br><span class="line">    // 哈希函数次数</span><br><span class="line">    hashIterations = optimalNumOfHashFunctions(expectedInsertions, size);</span><br><span class="line">    CommandBatchService executorService = new CommandBatchService(commandExecutor);</span><br><span class="line">    // 执行 Lua脚本，生成配置</span><br><span class="line">    executorService.evalReadAsync(configName, codec, RedisCommands.EVAL_VOID,</span><br><span class="line">            &quot;local size = redis.call(&#x27;hget&#x27;, KEYS[1], &#x27;size&#x27;);&quot; +</span><br><span class="line">                    &quot;local hashIterations = redis.call(&#x27;hget&#x27;, KEYS[1], &#x27;hashIterations&#x27;);&quot; +</span><br><span class="line">                    &quot;assert(size == false and hashIterations == false, &#x27;Bloom filter config has been changed&#x27;)&quot;,</span><br><span class="line">                    Arrays.&lt;Object&gt;asList(configName), size, hashIterations);</span><br><span class="line">    executorService.writeAsync(configName, StringCodec.INSTANCE,</span><br><span class="line">                                            new RedisCommand&lt;Void&gt;(&quot;HMSET&quot;, new VoidReplayConvertor()), configName,</span><br><span class="line">            &quot;size&quot;, size, &quot;hashIterations&quot;, hashIterations,</span><br><span class="line">            &quot;expectedInsertions&quot;, expectedInsertions, &quot;falseProbability&quot;, BigDecimal.valueOf(falseProbability).toPlainString());</span><br><span class="line">    try &#123;</span><br><span class="line">        executorService.execute();</span><br><span class="line">    &#125; catch (RedisException e) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqDdn5tbtHY3QHJQeicNZYlcia3NAFIClXMomoicTJJoYq3xpEvpnhXJbqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">Bf配置信息</p>
+<p>Redisson 布隆过滤器初始化的时候，会创建一个 Hash 数据结构的 key ，存储布隆过滤器的4个核心属性。</p>
+<p>那么 Redisson 布隆过滤器如何保存元素呢 ？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public boolean add(T object) &#123;</span><br><span class="line">    long[] hashes = hash(object);</span><br><span class="line">    while (true) &#123;</span><br><span class="line">        int hashIterations = this.hashIterations;</span><br><span class="line">        long size = this.size;</span><br><span class="line">        long[] indexes = hash(hashes[0], hashes[1], hashIterations, size);</span><br><span class="line">        CommandBatchService executorService = new CommandBatchService(commandExecutor);</span><br><span class="line">        addConfigCheck(hashIterations, size, executorService);</span><br><span class="line">        //创建 bitset 对象， 然后调用setAsync方法，该方法的参数是索引。</span><br><span class="line">        RBitSetAsync bs = createBitSet(executorService);</span><br><span class="line">        for (int i = 0; i &lt; indexes.length; i++) &#123;</span><br><span class="line">            bs.setAsync(indexes[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        try &#123;</span><br><span class="line">            List&lt;Boolean&gt; result = (List&lt;Boolean&gt;) executorService.execute().getResponses();</span><br><span class="line">            for (Boolean val : result.subList(1, result.size()-1)) &#123;</span><br><span class="line">                if (!val) &#123;</span><br><span class="line">                    return true;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            return false;</span><br><span class="line">        &#125; catch (RedisException e) &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从源码中，我们发现 Redisson 布隆过滤器操作的对象是 <strong>位图（bitMap）</strong> 。</p>
+<p>在 Redis 中，位图本质上是 string 数据类型，Redis 中一个字符串类型的值最多能存储 512 MB 的内容，每个字符串由多个字节组成，每个字节又由 8 个 Bit 位组成。位图结构正是使用“位”来实现存储的，它通过将比特位设置为 0 或 1来达到数据存取的目的，它存储上限为 <code>2^32 </code>，我们可以使用<code>getbit/setbit</code>命令来处理这个位数组。</p>
+<p>为了方便大家理解，我做了一个简单的测试。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibq4hpb82Iw31fw8uD2KA1XeEmpb64X6fucicNhP15lfd5zChfYv63DXxA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>通过 Redisson API 创建 key 为 <code>mybitset </code>的 位图  ，设置索引 3 ，5，6，8 位为 1 ，右侧的<strong>二进制值</strong>也完全匹配。</p>
+<h1 id="4-实战要点"><a href="#4-实战要点" class="headerlink" title="4 实战要点"></a>4 实战要点</h1><p>通过 Guava 和 Redisson 创建和使用布隆过滤器比较简单，我们下面讨论实战层面的注意事项。</p>
+<p><strong>1、缓存穿透场景</strong></p>
+<p>首先我们需要<strong>初始化</strong>布隆过滤器，然后当用户请求时，判断过滤器中是否包含该元素，若不包含该元素，则直接返回不存在。</p>
+<p>若包含则从缓存中查询数据，若缓存中也没有，则查询数据库并回写到缓存里，最后给前端返回。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqqicKiaicezPEEjL38Bob9gHm8mmZoaibVgAcQGuY6oonNBhTOib3CKyXzQQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><strong>2、元素删除场景</strong></p>
+<p>现实场景，元素不仅仅是只有增加，还存在删除元素的场景，比如说商品的删除。</p>
+<p>原理解析这一节，我们已经知晓：<strong>布隆过滤器其实并不支持删除元素，因为多个元素可能哈希到一个布隆过滤器的同一个位置，如果直接删除该位置的元素，则会影响其他元素的判断</strong>。</p>
+<p>我们有两种方案：</p>
+<p><strong>▍计数布隆过滤器</strong></p>
+<p>计数过滤器（Counting Bloom Filter）是布隆过滤器的扩展，标准 Bloom Filter 位数组的每一位扩展为一个小的计数器（Counter），在插入元素时给对应的 k （k 为哈希函数个数）个 Counter 的值分别加 1，删除元素时给对应的 k 个 Counter 的值分别减 1。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqz8ySyLiclW4DFeQ6lYRPe5D2QeTPQJdRr8JvVXLFUGvjXZgHibjgeicVg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>虽然计数布隆过滤器可以解决布隆过滤器无法删除元素的问题，但是又引入了另一个问题：“<strong>更多的资源占用，而且在很多时候会造成极大的空间浪费</strong>”。</p>
+<p><strong>▍ 定时重新构建布隆过滤器</strong></p>
+<p>从工程角度来看，<strong>定时重新构建布隆过滤器</strong>这个方案可行也可靠，同时也相对简单。</p>
+<p><img src="http://mmbiz.qpic.cn/mmbiz_png/V71JNV78n29xHsXfdxpE0oyk4Rxw4mibqsyRqRsedZctZl7SagB9ic746pznyeUicnFic04oWDpajymGDGFlHzPdBg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<ol>
+<li>定时任务触发全量商品查询 ;</li>
+<li>将商品编号添加到新的布隆过滤器 ;</li>
+<li>任务完成，修改商品布隆过滤器的映射（从旧 A 修改成 新 B ）;</li>
+<li>商品服务根据布隆过滤器的映射，选择新的布隆过滤器 B进行相关的查询操作 ；</li>
+<li>选择合适的时间点，删除旧的布隆过滤器 A。</li>
+</ol>
+<h1 id="5-总结"><a href="#5-总结" class="headerlink" title="5 总结"></a>5 总结</h1><p><strong>布隆过滤器</strong>是一个很长的<strong>二进制向量</strong>和一系列<strong>随机映射函数</strong>，用于<strong>检索一个元素是否在一个集合中</strong>。</p>
+<p>它的<strong>空间效率</strong>和<strong>查询时间</strong>都<strong>远远超过一般的算法</strong>，但是有一定的误判率 （函数返回 true , 意味着元素可能存在，函数返回 false ，元素必定不存在）。</p>
+<p>布隆过滤器的四个核心属性：</p>
+<ul>
+<li>k :  哈希函数个数</li>
+<li>m : 位数组长度</li>
+<li>n :  插入的元素个数</li>
+<li>p :  误判率</li>
+</ul>
+<p>Java 世界里 ，通过 Guava 和 Redisson 创建和使用布隆过滤器非常简单。</p>
+<p>布隆过滤器无法删除元素，但我们可以通过<strong>计数布隆过滤器</strong>和<strong>定时重新构建布隆过滤器</strong>两种方案实现删除元素的效果。</p>
+<p>为什么这么多的开源项目中使用布隆过滤器 ？</p>
+<p>因为它的设计精巧且简洁，工程上实现非常容易，效能高，虽然有一定的误判率，但软件设计不就是要 trade off 吗 ？</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2023-08-14T14:13:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/08/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">我的第一篇博客</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/06/26/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B9%8B%E7%BE%8E/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/hello-world/" class="archive-article-date">
-  	<time datetime="2023-08-14T14:03:12.952Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2023/07/06/explain%20%20%E7%B4%A2%E5%BC%95%E4%BC%98%E5%8C%96%E7%9A%84%E8%BF%99%E6%8A%8A%E7%BB%9D%E4%B8%96%E5%A5%BD%E5%89%91%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BC%9A%E7%94%A8%E5%90%97%EF%BC%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/16/%E5%BE%AE%E4%BF%A1%E5%AF%B9%E8%B4%A6%E4%BF%A1%E6%81%AF-%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%8E%A8%E9%80%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/08/14/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2023-08-14T13:47:30.523Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2023/08/14/Turnin'%20%E6%AD%8C%E8%AF%8D/" class="archive-article-date">
-  	<time datetime="2023-08-14T01:01:00.897Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -280,8 +464,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
